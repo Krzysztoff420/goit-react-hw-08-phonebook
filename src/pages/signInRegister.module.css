@@ -1,0 +1,23 @@
+.main {
+    padding: 0px 50px;
+}
+
+.label {
+  display: flex;
+  gap: 20px;
+}
+.input{
+    margin-left: 10px;
+border-radius: 4px;
+}
+
+.button {
+  background-color: white;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  cursor: pointer;
+}

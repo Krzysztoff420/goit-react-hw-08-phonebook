@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
@@ -18,7 +18,7 @@ export const ContactForm = () => {
     );
     sameName
       ? alert(`${name} is already in contacts.`)
-      : dispatch(addContact({ name: name, phone: number }));
+      : dispatch(addContact({ name, number }));
 
     form.reset();
   };
@@ -28,6 +28,7 @@ export const ContactForm = () => {
       <label htmlFor="name" className={css.label}>
         Name
         <input
+          className={css.input}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -38,6 +39,7 @@ export const ContactForm = () => {
       <label htmlFor="number" className={css.label}>
         Number
         <input
+          className={css.input}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
