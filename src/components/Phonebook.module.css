@@ -1,0 +1,15 @@
+.header {
+  font-size: 45px;
+  padding: 0;
+}
+
+.main {
+          padding: 0px 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          text-align: left;
+          font-size: 40;
+          color: #010101;
+}
